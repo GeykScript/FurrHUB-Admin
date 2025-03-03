@@ -1,6 +1,6 @@
 # FurrHub
 
-&#x20;A Web-based E-Commerce Platform for Pet Supplies and Services \
+A Web-based E-Commerce Platform for Pet Supplies and Services\
 FurrHub is a Laravel-based web application using Laravel Breeze with the Blade templating engine. This README will guide you through the installation and setup process.
 
 ## Prerequisites
@@ -24,79 +24,16 @@ Ensure you have the following installed on your system:
 
    Ensure the correct versions are installed.
 
-2. **Create a New Laravel Project**
+2. **Clone the Repository from GitHub**
 
    ```sh
-   laravel new furrhub
+   git clone https://github.com/GeykScript/FurrhHUB.git
    cd furrhub
    ```
 
-3. **Choose Breeze as the Starter Kit**
 
-   ```sh
-   breeze
-   ```
 
-4. **Select Blade as the Stack**
-
-   ```sh
-   blade
-   ```
-
-5. **Disable Dark Mode Support**
-
-   ```sh
-   no
-   ```
-
-6. **Choose PHPUnit as the Testing Framework**
-
-   ```sh
-   1
-   ```
-
-7. **Select MySQL as the Database**
-
-   ```sh
-   mysql
-   ```
-
-8. **Skip Default Database Migrations**
-
-   ```sh
-   no
-   ```
-
-9. **Install npm dependencies**
-
-   ```sh
-   npm install
-   ```
-
-### Fixing Vulnerabilities (if prompted)
-
-If vulnerabilities related to `esBuild` appear, follow these steps:
-
-1. Run the audit fix command:
-
-   ```sh
-   npm audit fix --force
-   ```
-
-2. If the issue persists, manually update `package-lock.json`:
-
-   - Open `package-lock.json`
-   - Search for `0.24.2`
-   - Replace it with `0.25.0`
-   - Save the file
-   - Run:
-     ```sh
-     npm install
-     npm run build
-     ```
-
-3. **Install Additional Dependencies (for React & Tailwind CSS)**
-
+1. Install Additional Dependencies  if none (for React & Tailwind CSS)
    ```sh
    npm install react react-dom
    npm install tailwindcss @tailwindcss/vite
@@ -106,10 +43,10 @@ If vulnerabilities related to `esBuild` appear, follow these steps:
 
 1. **Download and Import Database**
 
-   - Download [`furrhub.sql`](https://github.com/GeykScript/FurrHUB/main/furrhub.sql)
+   - Download [`furrhub.sql`](https://drive.google.com/drive/u/1/folders/1QFmRNVXt_gM_DsDhvGHHahxFJR2pL7wW)
    - Import it into MySQL
 
-2. **Update ************************`.env`************************ File**
+2. **Update ********************************************************************************`.env`******************************************************************************** File**
 
    ```ini
    DB_CONNECTION=mysql

@@ -1,3 +1,4 @@
+
 # FurrHub
 
 A Web-based E-Commerce Platform for Pet Supplies and Services\
@@ -70,6 +71,4 @@ Ensure you have the following installed on your system:
    ```sh
    npm run dev
    ```
-
-Your Laravel project is now set up and running! 🚀
 

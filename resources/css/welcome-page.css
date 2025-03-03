@@ -1,0 +1,49 @@
+/* CSS Code */
+.swiper-wrapper {
+    width: 100%;
+
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: ease-in-out !important;
+    position: relative;
+}
+/* Change the default bullet color */
+.swiper-pagination-bullet {
+    background-color: #000000 !important;
+    /* Indigo color */
+    opacity: 0.6;
+}
+
+/* Change the active bullet color */
+.swiper-pagination-bullet-active {
+    background-color: #ffffff !important;
+    /* Slightly lighter indigo */
+    opacity: 1;
+
+}
+.custom-scrollbar::-webkit-scrollbar {
+    display: none !important;
+    /* Hide scrollbar for Chrome, Safari */
+}
+
+.custom-scrollbar {
+    -ms-overflow-style: none !important;
+    /* Hide scrollbar for IE, Edge */
+    scrollbar-width: none !important;
+    /* Hide scrollbar for Firefox */
+}
+
+
+.custom-scrollbar2 {
+
+    scrollbar-width: none !important;
+    /* For Firefox */
+    -ms-overflow-style: none !important;
+    /* For IE & Edge */
+}
+
+.custom-scrollbar2::-webkit-scrollbar {
+
+    display: none !important;
+}
+
+

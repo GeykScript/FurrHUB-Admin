@@ -106,7 +106,8 @@ If vulnerabilities related to `esBuild` appear, follow these steps:
 
 1. **Download and Import Database**
 
-   - [Download `furrhub.sql`](https://drive.google.com/drive/u/1/folders/1QFmRNVXt_gM_DsDhvGHHahxFJR2pL7wW)
+   -  Download [`furrhub.sql`](https://raw.githubusercontent.com/GeykScript/FurrHUB/main/furrhub.sql)
+
    - Import it into MySQL
 
 2. **Update ************************`.env`************************ File**

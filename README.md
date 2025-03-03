@@ -1,12 +1,12 @@
-# FurrHUB
- A Web-based E-Commerce Platform for Pet Supplies and Services 
 # FurrHub
 
+&#x20;A Web-based E-Commerce Platform for Pet Supplies and Services \
 FurrHub is a Laravel-based web application using Laravel Breeze with the Blade templating engine. This README will guide you through the installation and setup process.
 
 ## Prerequisites
 
 Ensure you have the following installed on your system:
+
 - [Laravel 11.x](https://laravel.com/docs/11.x/installation)
 - Laravel Installer (`Laravel Installer 5.11.2`)
 - [Composer 2.8.5](https://getcomposer.org/)
@@ -16,60 +16,78 @@ Ensure you have the following installed on your system:
 ## Installation
 
 1. **Verify Laravel and Composer Installation**
+
    ```sh
    laravel
    composer
    ```
+
    Ensure the correct versions are installed.
 
 2. **Create a New Laravel Project**
+
    ```sh
    laravel new furrhub
    cd furrhub
    ```
 
 3. **Choose Breeze as the Starter Kit**
+
    ```sh
    breeze
    ```
 
 4. **Select Blade as the Stack**
+
    ```sh
    blade
    ```
 
 5. **Disable Dark Mode Support**
+
    ```sh
    no
    ```
 
 6. **Choose PHPUnit as the Testing Framework**
+
    ```sh
    1
    ```
 
 7. **Select MySQL as the Database**
+
    ```sh
    mysql
    ```
 
 8. **Skip Default Database Migrations**
+
    ```sh
    no
    ```
 
 9. **Install npm dependencies**
+
    ```sh
    npm install
    ```
 
 ### Fixing Vulnerabilities (if prompted)
+
+If vulnerabilities related to `esBuild` appear, follow these steps:
+
+1. Run the audit fix command:
+
    ```sh
    npm audit fix --force
    ```
-   If necessary, update `package-lock.json`:
+
+2. If the issue persists, manually update `package-lock.json`:
+
    - Open `package-lock.json`
-   - Find `0.24.2` and replace it with `0.25.0`
+   - Search for `0.24.2`
+   - Replace it with `0.25.0`
    - Save the file
    - Run:
      ```sh
@@ -77,19 +95,22 @@ Ensure you have the following installed on your system:
      npm run build
      ```
 
-10. **Install Additional Dependencies (for React & Tailwind CSS)**
-    ```sh
-    npm install react react-dom
-    npm install tailwindcss @tailwindcss/vite
-    ```
+3. **Install Additional Dependencies (for React & Tailwind CSS)**
+
+   ```sh
+   npm install react react-dom
+   npm install tailwindcss @tailwindcss/vite
+   ```
 
 ## Database Setup
 
 1. **Download and Import Database**
-   - Download `FURRHUB.sql`
+
+   - [Download `furrhub.sql`](https://drive.google.com/drive/u/1/folders/1QFmRNVXt_gM_DsDhvGHHahxFJR2pL7wW)
    - Import it into MySQL
 
-2. **Update `.env` File**
+2. **Update ************************`.env`************************ File**
+
    ```ini
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
@@ -99,19 +120,16 @@ Ensure you have the following installed on your system:
    DB_PASSWORD=
    ```
 
-3. **Run Database Migrations**
-   ```sh
-   php artisan migrate
-   ```
-
 ## Running the Application
 
 1. **Start the Laravel Development Server**
+
    ```sh
    php artisan serve
    ```
 
 2. **Start Frontend Development**
+
    ```sh
    npm run dev
    ```

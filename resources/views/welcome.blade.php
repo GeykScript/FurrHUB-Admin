@@ -198,8 +198,8 @@
 
     <div class="w-full overflow-x-auto flex justify-start  custom-scrollbar2 lg:p-4">
       <div class="w-full flex flex-col xl:gap-1 gap-2 whitespace-nowrap scrollbar lg:p-5  custom-scrollbar2  "> <!--xl-gap-10  mt-3-->
-        <div class="flex flex-row items-center justify-between md:px-10 px-2 mt-5 h-20 border-2 border-gray-200 rounded-lg bg-orange-300">
-          <h1 class="md:text-3xl text-lg font-bold">Top Seller Products</h1>
+        <div class="flex flex-row items-center justify-between md:px-10 px-2 mt-5 h-20  rounded-lg ">
+          <h1 class="md:text-5xl text-lg font-bold ">Best Seller Products</h1>
           <a href="" class="md:text-lg text-sm flex flex-row items-center ">See All <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
             </svg>

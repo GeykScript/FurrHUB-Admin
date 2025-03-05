@@ -101,6 +101,8 @@
         </div>
     </div>
 </header>
+
+
 <div class="pt-[100px]"></div>
 
 <!-- carousel part -->
@@ -231,10 +233,11 @@
         </div>
 
 
+        <!-- best seller part -->
         <div class="w-full overflow-x-auto flex justify-start  custom-scrollbar2 lg:p-4">
             <div class="w-full flex flex-col xl:gap-1 gap-2 whitespace-nowrap scrollbar lg:p-5  custom-scrollbar2  "> <!--xl-gap-10  mt-3-->
-                <div class="flex flex-row items-center justify-between md:px-10 px-2 mt-5 h-20 border-2 border-gray-200 rounded-lg bg-orange-300">
-                    <h1 class="md:text-3xl text-lg font-bold">Top Seller Products</h1>
+                <div class="flex flex-row items-center justify-between md:px-10 px-2 mt-5 h-20  rounded-lg ">
+                    <h1 class="md:text-5xl text-lg font-bold text-gray-600  ">Best Seller Products</h1>
                     <a href="" class="md:text-lg text-sm flex flex-row items-center ">See All <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
@@ -251,10 +254,13 @@
                             <h4 class="font-semibold text-wrap text-black text-md">Pedigree 18 Pouch Variety Pack</h4>
                             <div class="flex justify-between">
                                 <h4 class="font-bold text-wrap text-orange-500 text-md"><span class="text-lg">₱</span> 350.00</h4>
-                                <button class="text-white text-sm font-semibold rounded-lg p-1 col-span-1 "><svg xmlns="http://www.w3.org/2000/svg" fill="red" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="size-8">
+
+                                <button x-data="{ filled: false }" @click="filled = !filled" class="text-white text-sm font-semibold rounded-lg p-1 col-span-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" :fill="filled ? 'red' : 'white'" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="size-8">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
                                     </svg>
                                 </button>
+
                             </div>
                             <div class="grid grid-cols-6 gap-1 h-10">
                                 <button class="bg-[#F0A02C] hover:bg-orange-400 text-white text-sm font-semibold rounded-lg p-1 col-span-3  md:col-span-3">Add to Cart</button>
@@ -271,7 +277,8 @@
                             <h4 class="font-semibold text-wrap text-black text-md"> Royal Canin Cat Food</h4>
                             <div class="flex justify-between">
                                 <h4 class="font-bold text-wrap text-orange-500 text-md"><span class="text-lg">₱</span> 350.00</h4>
-                                <button class="text-white text-sm font-semibold rounded-lg p-1 col-span-1 "><svg xmlns="http://www.w3.org/2000/svg" fill="red" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="size-8">
+                                <button x-data="{ filled: false }" @click="filled = !filled" class="text-white text-sm font-semibold rounded-lg p-1 col-span-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" :fill="filled ? 'red' : 'white'" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="size-8">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
                                     </svg>
                                 </button>
@@ -291,7 +298,8 @@
                             <h4 class="font-semibold text-wrap text-black text-md">Pedigree 18 Pouch Variety Pack</h4>
                             <div class="flex justify-between">
                                 <h4 class="font-bold text-wrap text-orange-500 text-md"><span class="text-lg">₱</span> 350.00</h4>
-                                <button class="text-white text-sm font-semibold rounded-lg p-1 col-span-1 "><svg xmlns="http://www.w3.org/2000/svg" fill="red" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="size-8">
+                                <button x-data="{ filled: false }" @click="filled = !filled" class="text-white text-sm font-semibold rounded-lg p-1 col-span-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" :fill="filled ? 'red' : 'white'" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="size-8">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
                                     </svg>
                                 </button>
@@ -311,7 +319,8 @@
                             <h4 class="font-semibold text-wrap text-black text-md"> Royal Canin Cat Food</h4>
                             <div class="flex justify-between">
                                 <h4 class="font-bold text-wrap text-orange-500 text-md"><span class="text-lg">₱</span> 350.00</h4>
-                                <button class="text-white text-sm font-semibold rounded-lg p-1 col-span-1 "><svg xmlns="http://www.w3.org/2000/svg" fill="red" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="size-8">
+                                <button x-data="{ filled: false }" @click="filled = !filled" class="text-white text-sm font-semibold rounded-lg p-1 col-span-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" :fill="filled ? 'red' : 'white'" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="size-8">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
                                     </svg>
                                 </button>
@@ -331,7 +340,8 @@
                             <h4 class="font-semibold text-wrap text-black text-md">Pedigree 18 Pouch Variety Pack</h4>
                             <div class="flex justify-between">
                                 <h4 class="font-bold text-wrap text-orange-500 text-md"><span class="text-lg">₱</span> 350.00</h4>
-                                <button class="text-white text-sm font-semibold rounded-lg p-1 col-span-1 "><svg xmlns="http://www.w3.org/2000/svg" fill="red" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="size-8">
+                                <button x-data="{ filled: false }" @click="filled = !filled" class="text-white text-sm font-semibold rounded-lg p-1 col-span-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" :fill="filled ? 'red' : 'white'" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="size-8">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
                                     </svg>
                                 </button>
@@ -351,7 +361,8 @@
                             <h4 class="font-semibold text-wrap text-black text-md"> Royal Canin Cat Food</h4>
                             <div class="flex justify-between">
                                 <h4 class="font-bold text-wrap text-orange-500 text-md"><span class="text-lg">₱</span> 350.00</h4>
-                                <button class="text-white text-sm font-semibold rounded-lg p-1 col-span-1 "><svg xmlns="http://www.w3.org/2000/svg" fill="red" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="size-8">
+                                <button x-data="{ filled: false }" @click="filled = !filled" class="text-white text-sm font-semibold rounded-lg p-1 col-span-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" :fill="filled ? 'red' : 'white'" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="size-8">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
                                     </svg>
                                 </button>

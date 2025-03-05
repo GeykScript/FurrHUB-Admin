@@ -8,10 +8,10 @@ Alpine.start();
 
 
 
-import { createIcons, CircleCheckBig ,Truck, ShieldCheck, CircleArrowRight    } from 'lucide';
+import { createIcons, CircleCheckBig ,Truck, ShieldCheck, CircleArrowRight,PawPrint   } from 'lucide';
 
 createIcons({
-    icons: { CircleCheckBig,Truck ,ShieldCheck, CircleArrowRight },
+    icons: { CircleCheckBig,Truck ,ShieldCheck, CircleArrowRight,PawPrint  },
 });
 
 

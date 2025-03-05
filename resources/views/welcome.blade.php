@@ -12,7 +12,7 @@
   <link rel="icon" href="{{ asset('logo/logo1.png') }}" type="image/png">
 
   <link href="https://fonts.bunny.net/css?family=poppins:400,500,600&display=swap" rel="stylesheet" />
-  @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/welcome-page.css', 'resources/js/carousel.jsx'],'resources/js/components/heart.jsx')
+  @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/welcome-page.css', 'resources/js/carousel.jsx'])
 
 </head>
 
@@ -198,11 +198,9 @@
     <!-- best seller part -->
     <div class="w-full overflow-x-auto flex justify-start  custom-scrollbar2 lg:p-4">
       <div class="w-full flex flex-col xl:gap-1 gap-2 whitespace-nowrap scrollbar lg:p-5  custom-scrollbar2  "> <!--xl-gap-10  mt-3-->
-        <div class="flex flex-row items-center justify-between md:px-10 px-2 mt-5 h-20  rounded-lg ">
-          <h1 class="md:text-5xl text-lg font-bold text-gray-600  ">Best Seller Products</h1>
-          <a href="" class="md:text-lg text-sm flex flex-row items-center ">See All <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-            </svg>
+        <div class="flex flex-row items-center justify-between md:px-10 px-2 mt-5 h-20  rounded-lg bg-gradient-to-r from-orange-600  to-orange-400  ">
+          <h1 class="md:text-4xl text-lg font-bold text-white  ">Best Seller Products</h1>
+          <a href="" class="md:text-lg text-sm flex flex-row items-center  text-white">See All <i data-lucide="circle-arrow-right" class="w-6 h-6 ml-1"></i>
           </a>
         </div>
 
@@ -339,7 +337,12 @@
 
         </div>
       </div>
+
     </div>
+
+    <x-authenticity-banner />
+
+    
 
 
 
@@ -347,7 +350,7 @@
 
 </body>
 <!-- Footer -->
-<x-footer bgColor="bg-sky-300" />
+<x-footer bgColor=" bg-gradient-to-r from-orange-600" />
 
 
 </html>

@@ -38,6 +38,7 @@ Ensure you have the following installed on your system:
    ```sh
    npm install react react-dom
    npm install tailwindcss @tailwindcss/vite
+   npm install lucide
    ```
 
 ## Database Setup

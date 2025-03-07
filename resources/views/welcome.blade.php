@@ -76,42 +76,42 @@
   <div class="swiper progress-slide-carousel swiper-container relative ">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <a href="{{ route('login') }}" target="_blank" class="">
+        <a href="{{ route('login') }}" class="">
           <div class="rounded-2xl h-[15rem] md:h-full ">
             <img src="{{ asset('images/Furrhub-carousel/1.jpg') }}" alt="carousel-pet-services" class="w-[100%] h-[100%] object-cover " />
           </div>
         </a>
       </div>
       <div class="swiper-slide">
-        <a href="{{ route('login') }}" target="_blank" class="">
+        <a href="{{ route('login') }}" class="">
           <div class="rounded-2xl h-[15rem] md:h-full ">
             <img src="{{ asset('images/Furrhub-carousel/2.jpg') }}" alt="carousel-pet-services" class="w-[100%] h-[100%] object-cover " />
           </div>
         </a>
       </div>
       <div class="swiper-slide">
-        <a href="{{ route('login') }}" target="_blank" class="">
+        <a href="{{ route('login') }}" class="">
           <div class="rounded-2xl h-[15rem] md:h-full ">
             <img src="{{ asset('images/Furrhub-carousel/3.jpg') }}" alt="carousel-pet-services" class="w-[100%] h-[100%] object-cover " />
           </div>
         </a>
       </div>
       <div class="swiper-slide">
-        <a href="{{ route('login') }}" target="_blank" class="">
+        <a href="{{ route('login') }}" class="">
           <div class="rounded-2xl h-[15rem] md:h-full ">
             <img src="{{ asset('images/Furrhub-carousel/4.jpg') }}" alt="carousel-pet-services" class="w-[100%] h-[100%] object-cover " />
           </div>
         </a>
       </div>
       <div class="swiper-slide">
-        <a href="{{ route('login') }}" target="_blank" class="">
+        <a href="{{ route('login') }}" class="">
           <div class="rounded-2xl h-[15rem] md:h-full ">
             <img src="{{ asset('images/Furrhub-carousel/5.jpg') }}" alt="carousel-pet-services" class="w-[100%] h-[100%] object-cover " />
           </div>
         </a>
       </div>
       <div class="swiper-slide">
-        <a href="{{ route('login') }}" target="_blank" class="">
+        <a href="{{ route('login') }}" class="">
           <div class="rounded-2xl h-[15rem] md:h-full ">
             <img src="{{ asset('images/Furrhub-carousel/6.jpg') }}" alt="carousel-pet-services" class="w-[100%] h-[100%] object-cover " />
           </div>
@@ -195,17 +195,18 @@
       </div>
     </div>
 
-    <div class="md:px-[3rem] mt-3 px-[1rem]">
-      <div class="flex flex-row items-center justify-between md:px-10 px-2 mt-5 h-20  rounded-lg bg-gradient-to-r from-orange-600  to-orange-400  ">
-        <div class="flex flex-row items-center gap-5">
-          <div> <i data-lucide="paw-print" class="w-10 h-10 text-white mx-auto"></i></div>
-          <h1 class="md:text-4xl text-lg font-bold text-white">Best Seller Products</h1>
+    <div class="md:px-[3rem]  px-2">
+      <div class="flex flex-row items-center justify-between md:px-10 px-2 mt-5 h-20  rounded-lg bg-gradient-to-r from-orange-600  to-orange-400    ">
+        <div class="flex flex-row items-center md:gap-5 gap-1 ">
+          <div> <i data-lucide="paw-print" class="md:w-10 md:h-10 w-6 h-6 text-white mx-auto"></i></div>
+          <h1 class="md:text-4xl text-md font-bold text-white ">Best Seller Products</h1>
 
         </div>
-        <a href="" class="md:text-lg text-sm flex flex-row items-center  text-white">See All <i data-lucide="circle-arrow-right" class="w-6 h-6 ml-1"></i>
+        <a href="" class="md:text-lg text-[10px] flex flex-row items-center  text-white">See All <i data-lucide="circle-arrow-right" class="md:w-6 md:h-6 w-[15px] h-[15px] ml-1"></i>
         </a>
       </div>
-
+    </div>
+    <div class="md:px-[3rem] mt-3 px-[1rem]">
       <div class="grid grid-cols-2 md:grid-cols-6 gap-4  ">
 
         <div class="group relative md:min-w-[230px] min-w-[150px]    p-4 bg-white rounded-lg shadow-lg border-2 border-gray-100">
@@ -275,75 +276,7 @@
           </div>
         </div>
 
-        <div class="group relative md:min-w-[230px] min-w-[150px]    p-4 bg-white rounded-lg shadow-lg border-2 border-gray-100">
-          <img src="{{ asset('images/products/dog.jpg') }}" alt="Best-Product" class="aspect-square w-full rounded-lg bg-gray-500 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-74">
-          <div class="mt-2 flex justify-between flex flex-col gap-1">
-            <p class="text-sm font-normal text-gray-500 text-end">120 sold</p>
-            <h5 class="font-normal text-wrap text-orange-500 text-sm">FurrHUB</h5>
-            <h4 class="font-semibold text-wrap text-black text-md">Pedigree 18 Pouch Variety Pack</h4>
-            <div class="flex justify-between">
-              <h4 class="font-bold text-wrap text-orange-500 text-lg"><span class="text-xl">₱</span> 350.00</h4>
-            </div>
-          </div>
-        </div>
 
-        <div class="group relative md:min-w-[230px] min-w-[150px]    p-4 bg-white rounded-lg shadow-lg border-2 border-gray-100">
-          <img src="{{ asset('images/products/cat-foods.webp') }}" alt="Best-Product" class="aspect-square w-full rounded-lg bg-gray-500 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-74">
-          <div class="mt-2 flex justify-between flex flex-col gap-1">
-            <p class="text-sm font-normal text-gray-500 text-end">120 sold</p>
-            <h5 class="font-normal text-wrap text-orange-500 text-sm">FurrHUB</h5>
-            <h4 class="font-semibold text-wrap text-black text-md">Royal Canin Cat Food</h4>
-            <div class="flex justify-between">
-              <h4 class="font-bold text-wrap text-orange-500 text-lg"><span class="text-xl">₱</span> 350.00</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="group relative md:min-w-[230px] min-w-[150px]    p-4 bg-white rounded-lg shadow-lg border-2 border-gray-100">
-          <img src="{{ asset('images/products/dog.jpg') }}" alt="Best-Product" class="aspect-square w-full rounded-lg bg-gray-500 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-74">
-          <div class="mt-2 flex justify-between flex flex-col gap-1">
-            <p class="text-sm font-normal text-gray-500 text-end">120 sold</p>
-            <h5 class="font-normal text-wrap text-orange-500 text-sm">FurrHUB</h5>
-            <h4 class="font-semibold text-wrap text-black text-md">Pedigree 18 Pouch Variety Pack</h4>
-            <div class="flex justify-between">
-              <h4 class="font-bold text-wrap text-orange-500 text-lg"><span class="text-xl">₱</span> 350.00</h4>
-            </div>
-          </div>
-        </div>
-        <div class="group relative md:min-w-[230px] min-w-[150px]    p-4 bg-white rounded-lg shadow-lg border-2 border-gray-100">
-          <img src="{{ asset('images/products/dog.jpg') }}" alt="Best-Product" class="aspect-square w-full rounded-lg bg-gray-500 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-74">
-          <div class="mt-2 flex justify-between flex flex-col gap-1">
-            <p class="text-sm font-normal text-gray-500 text-end">120 sold</p>
-            <h5 class="font-normal text-wrap text-orange-500 text-sm">FurrHUB</h5>
-            <h4 class="font-semibold text-wrap text-black text-md">Pedigree 18 Pouch Variety Pack</h4>
-            <div class="flex justify-between">
-              <h4 class="font-bold text-wrap text-orange-500 text-lg"><span class="text-xl">₱</span> 350.00</h4>
-            </div>
-          </div>
-        </div>
-        <div class="group relative md:min-w-[230px] min-w-[150px]    p-4 bg-white rounded-lg shadow-lg border-2 border-gray-100">
-          <img src="{{ asset('images/products/dog.jpg') }}" alt="Best-Product" class="aspect-square w-full rounded-lg bg-gray-500 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-74">
-          <div class="mt-2 flex justify-between flex flex-col gap-1">
-            <p class="text-sm font-normal text-gray-500 text-end">120 sold</p>
-            <h5 class="font-normal text-wrap text-orange-500 text-sm">FurrHUB</h5>
-            <h4 class="font-semibold text-wrap text-black text-md">Pedigree 18 Pouch Variety Pack</h4>
-            <div class="flex justify-between">
-              <h4 class="font-bold text-wrap text-orange-500 text-lg"><span class="text-xl">₱</span> 350.00</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="group relative md:min-w-[230px] min-w-[150px]    p-4 bg-white rounded-lg shadow-lg border-2 border-gray-100">
-          <img src="{{ asset('images/products/cat-foods.webp') }}" alt="Best-Product" class="aspect-square w-full rounded-lg bg-gray-500 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-74">
-          <div class="mt-2 flex justify-between flex flex-col gap-1">
-            <p class="text-sm font-normal text-gray-500 text-end">120 sold</p>
-            <h5 class="font-normal text-wrap text-orange-500 text-sm">FurrHUB</h5>
-            <h4 class="font-semibold text-wrap text-black text-md">Royal Canin Cat Food</h4>
-            <div class="flex justify-between">
-              <h4 class="font-bold text-wrap text-orange-500 text-lg"><span class="text-xl">₱</span> 350.00</h4>
-            </div>
-          </div>
-        </div>
 
       </div>
     </div>

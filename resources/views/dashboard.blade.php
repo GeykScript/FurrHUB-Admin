@@ -39,7 +39,7 @@
         </form>
 
         <div class="flex flex-row text-white  font-semibold mt-4">
-            <a href="" class="flex flex-row gap-0 align-center">
+            <a href="{{route('shoppingCart')}}" class="flex flex-row gap-0 align-center">
                 <img src="{{ asset ('logo/cart.svg')}}" alt="user" class="h-[27px] w-[30px] lg:h-[35px] lg:w-[43px]" />
                 <div class="bg-[#F23D3D] h-[20px] w-[35px]  lg:h-[27px] lg:w-[45px] rounded-full flex justify-center items-center">
                     <p class="xl:text-[16px] text-[10px] ">0</p>
@@ -111,42 +111,42 @@
         <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-                <a href="https://example.com/page1" target="_blank" class="">
+                <a href="{{route('appointment')}}" class="">
                     <div class="rounded-2xl h-[15rem] md:h-full ">
                         <img src="{{ asset('images/Furrhub-carousel/1.jpg') }}" alt="carousel-pet-services" class="w-[100%] h-[100%] object-cover " />
                     </div>
                 </a>
             </div>
             <div class="swiper-slide">
-                <a href="https://example.com/page1" target="_blank" class="">
+                <a href="{{route('appointment')}}" class="">
                     <div class="rounded-2xl h-[15rem] md:h-full ">
                         <img src="{{ asset('images/Furrhub-carousel/2.jpg') }}" alt="carousel-pet-services" class="w-[100%] h-[100%] object-cover " />
                     </div>
                 </a>
             </div>
             <div class="swiper-slide">
-                <a href="https://example.com/page1" target="_blank" class="">
+                <a href="{{route('appointment')}}" class="">
                     <div class="rounded-2xl h-[15rem] md:h-full ">
                         <img src="{{ asset('images/Furrhub-carousel/3.jpg') }}" alt="carousel-pet-services" class="w-[100%] h-[100%] object-cover " />
                     </div>
                 </a>
             </div>
             <div class="swiper-slide">
-                <a href="https://example.com/page1" target="_blank" class="">
+                <a href="{{route('appointment')}}" class="">
                     <div class="rounded-2xl h-[15rem] md:h-full ">
                         <img src="{{ asset('images/Furrhub-carousel/4.jpg') }}" alt="carousel-pet-services" class="w-[100%] h-[100%] object-cover " />
                     </div>
                 </a>
             </div>
             <div class="swiper-slide">
-                <a href="https://example.com/page1" target="_blank" class="">
+                <a href="{{route('appointment')}}" class="">
                     <div class="rounded-2xl h-[15rem] md:h-full ">
                         <img src="{{ asset('images/Furrhub-carousel/5.jpg') }}" alt="carousel-pet-services" class="w-[100%] h-[100%] object-cover " />
                     </div>
                 </a>
             </div>
             <div class="swiper-slide">
-                <a href="https://example.com/page1" target="_blank" class="">
+                <a href="{{route('appointment')}}" class="">
                     <div class="rounded-2xl h-[15rem] md:h-full ">
                         <img src="{{ asset('images/Furrhub-carousel/6.jpg') }}" alt="carousel-pet-services" class="w-[100%] h-[100%] object-cover " />
                     </div>
@@ -233,7 +233,7 @@
         </div>
 
         <div class="md:px-[3rem]  px-2">
-    <div class="flex flex-row items-center justify-between md:px-10 px-2 mt-5 h-20  rounded-lg bg-gradient-to-r from-orange-600  to-orange-400    ">
+            <div class="flex flex-row items-center justify-between md:px-10 px-2 mt-5 h-20  rounded-lg bg-gradient-to-r from-orange-600  to-orange-400    ">
                 <div class="flex flex-row items-center md:gap-5 gap-1 ">
                     <div> <i data-lucide="paw-print" class="md:w-10 md:h-10 w-6 h-6 text-white mx-auto"></i></div>
                     <h1 class="md:text-4xl text-md font-bold text-white ">Best Seller Products</h1>
@@ -474,6 +474,6 @@
 
 </body>
 <!-- Footer -->
-<x-footer bgColor="bg-sky-300" />
+<x-footer bgColor=" bg-gradient-to-r from-orange-600" />
 
 </html>

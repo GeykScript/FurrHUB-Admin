@@ -1,7 +1,10 @@
 <?php
-
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\ShoppingCartController;
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,4 +22,22 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+
+
 require __DIR__.'/auth.php';
+
+
+
+Route::get('/appointment', function () {
+    return view('services.appointment');
+})->name('appointment');
+
+Route::get('/shoppingCart', function () {
+    return view('cart.shoppingPage');
+})->name('shoppingCart');
+
+
+
+
+

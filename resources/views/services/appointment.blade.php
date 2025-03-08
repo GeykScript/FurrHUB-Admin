@@ -107,7 +107,6 @@
     <!-- Footer -->
 </body>
 
-
 <x-footer bgColor=" bg-gradient-to-r from-orange-600" />
 
 </html>

@@ -3,6 +3,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\ShoppingCartController;
+use App\Http\Controllers\ProductController;
+
 
 
 
@@ -28,6 +30,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/shoppingCart', [ShoppingCartController::class, 'index'])->name('shoppingCart');
 Route::get('/appointment', [AppointmentController::class, 'index'])->name('appointment');
+Route::get('/product/view', [ProductController::class, 'viewProduct'])->name('product.view');
 
 
 require __DIR__.'/auth.php';

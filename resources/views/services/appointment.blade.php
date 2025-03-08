@@ -23,16 +23,22 @@
 <!-- nav part -->
 
 
-<header class="flex bg-sky-400  flex-row justify-start items-center w-full xl:px-10 px-5 py-1 ">
+<header class="flex bg-[#F0A02C] flex-row justify-start items-center w-full xl:px-10 px-5 py-1 ">
     <div class="flex flex-row items-center justify-start w-full ">
-        <a href="{{route ('dashboard')}}">
-            <img src="{{ asset('logo/logo1.png') }}" alt="furrhub-logo" class="h-[60px] w-[150px] md:h-[130px] md:w-[300px] " />
+        <a href="{{route ('dashboard')}}" class="hover:cursor-pointer focus:outline-none">
+            <img src="{{ asset('logo/logo1.png') }}" alt="furrhub-logo" class="h-[60px] w-[150px] md:h-[130px] md:w-[300px] hidden lg:block " />
         </a>
-        <div class="flex flex-row items-center justify-between w-full">
-            <div class="flex flex-row  items-center justify-evenly ml-1 md:ml-5 xl:text-lg ">
+        <div class="flex flex-col  lg:flex-row flex-col-reverse items-center justify-between w-full">
+            <div></div>
 
-                <div class="xl:ml-6 ml-3 text-sm xl:text-lg "> </div>
+            <div class="flex flex-row lg:gap-20 lg:text-lg text-sm gap-10">
+                <a href="#" class="hover:underline hover:text-gray-700 text-gray-800 flex"><i data-lucide="house"></i><span class="md:block hidden"> Home</span></a>
+                <a href="#" class="hover:underline hover:text-gray-700 text-gray-800 flex"><i data-lucide="paw-print"></i><span class="md:block hidden"> My Pets</span></a>
+                <a href="#" class="hover:underline hover:text-gray-700 text-gray-800 flex"><i data-lucide="notebook-pen"></i><span class="md:block hidden">Appointments</span></a>
+                <a href="#" class="hover:underline hover:text-gray-700 text-gray-800 flex"><i data-lucide="philippine-peso"></i><span class="md:block hidden">Price Lists</span></a>
             </div>
+
+
             <div class="flex flex-row gap-3 ml-auto xl:ml-0">
                 <div class="flex flex-row text-black text-[12px] lg:text-[20px] font-semibold px-3 lg:px-0">
                     <nav class="flex flex-row gap-1 md:gap-1 align-center">
@@ -91,15 +97,22 @@
 
 <body class="font-sans antialiased bg-white-400 dark:text-black/50 min-h-screen flex flex-col">
     <div class="bg-white flex-grow">
+
+        <div class="mt-2">
+            <img src="{{asset('images/welcome-booking.jpg')}}" alt="">
+        </div>
         <div class="relative xl:p-12 p-2">
-            <div class="flex flex-row xl:text-5xl text-xl font-bold xl:px-[10rem]">
+            <div class="flex flex-row xl:text-4xl text-xl font-bold xl:px-[10rem]">
                 <i data-lucide="paw-print" class="xl:w-[5rem] xl:h-[5rem] w-[2rem] h-[2rem] mt-3 xl:mt-0 text-orange-500"> </i>
                 <div class="items-center justify-center p-4">
-                    <h1 class="items-center text-orange-500">FurrHUB Services</h1>
+                    @if (Route::has('login'))
+                    @auth
+                    <p class="text-3xl font-normal">Hello, <span class="font-bold">{{ Auth::user()->first_name}} </span> </p>
+                    @endauth
+                    @endif
+                    <h1 class="items-center text-orange-500">Welcome to FurrHUB Services!</h1>
                 </div>
             </div>
-
-
 
         </div>
     </div>

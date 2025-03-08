@@ -166,7 +166,6 @@
                                 <button type="button" id="decrement-button" data-input-counter-decrement="quantity-input"
                                     class="bg-white hover:bg-gray-100 border-gray-100 border rounded-s-xl p-3 h-11 focus:outline-none">
                                     <i data-lucide="minus" class="text-gray-500"></i>
-
                                 </button>
                                 <input type="number" id="quantity-input" data-input-counter aria-describedby="helper-text-explanation"
                                     class="bg-white border-x-0 border-gray-100 h-11 text-center text-gray-900 text-xl focus:outline-none  focus:ring-0 focus:border-transparent block w-10 xl:w-full py-2.5 appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
@@ -174,7 +173,6 @@
                                 <button type="button" id="increment-button" data-input-counter-increment="quantity-input"
                                     class="bg-white hover:bg-gray-100 border-gray-100 border rounded-e-xl p-3 h-11 focus:outline-none">
                                     <i data-lucide="plus" class="text-gray-500"></i>
-
                                 </button>
                             </div>
                         </form>

@@ -23,7 +23,7 @@
 <!-- nav part -->
 
 
-<header class="flex bg-[#F0A02C] flex-row justify-start items-center w-full xl:px-10 px-5 py-1 ">
+<header class="fixed top-0 flex bg-[#F0A02C] flex-row justify-start items-center w-full xl:px-10 px-5 py-1 ">
     <div class="flex flex-row items-center justify-start w-full ">
         <a href="{{route ('dashboard')}}" class="hover:cursor-pointer focus:outline-none">
             <img src="{{ asset('logo/logo1.png') }}" alt="furrhub-logo" class="h-[60px] w-[150px] md:h-[130px] md:w-[300px] hidden lg:block " />
@@ -94,20 +94,21 @@
     </div>
 </header>
 
+<div class="lg:pt-[100px] pt-[80px] lg:mb-10"></div>
 
 <body class="font-sans antialiased bg-white-400 dark:text-black/50 min-h-screen flex flex-col">
     <div class="bg-white flex-grow">
-
-        <div class="mt-2">
-            <img src="{{asset('images/welcome-booking.jpg')}}" alt="">
+        <div class="rounded-2xl  md:h-full ">
+            <img src="{{asset('images/welcome-booking.jpg')}}" alt="" class="w-full lg:h-full h-[160px]  object-cover" />
         </div>
         <div class="relative xl:p-12 p-2">
-            <div class="flex flex-row xl:text-4xl text-xl font-bold xl:px-[10rem]">
-                <i data-lucide="paw-print" class="xl:w-[5rem] xl:h-[5rem] w-[2rem] h-[2rem] mt-3 xl:mt-0 text-orange-500"> </i>
-                <div class="items-center justify-center p-4">
+            <div class="flex flex-row xl:text-4xl text-lg font-bold xl:px-[10rem]">
+                <i data-lucide="paw-print" class="xl:w-[5rem] xl:h-[5rem] w-[4rem] h-[4rem] mt-3 xl:mt-0 text-orange-500"> </i>
+                <div class="items-center justify-center xl:p-4 p-3">
+                    
                     @if (Route::has('login'))
                     @auth
-                    <p class="text-3xl font-normal">Hello, <span class="font-bold">{{ Auth::user()->first_name}} </span> </p>
+                    <p class="xl:text-3xl font-normal">Hello, <span class="font-bold">{{ Auth::user()->first_name}} </span> </p>
                     @endauth
                     @endif
                     <h1 class="items-center text-orange-500">Welcome to FurrHUB Services!</h1>

@@ -22,7 +22,7 @@
 <!-- 38B6FF -->
 <!-- nav part -->
 
-<header class="fixed top-0 left-0 w-full z-50 flex flex-col flex-col-reverse md:flex-row justify-between items-center lg:px-10 bg-[#F0A02C] shadow-lg">
+<header class="fixed top-0 left-0 w-full z-50 flex flex-col flex-col-reverse md:flex-row justify-between items-center lg:px-10 bg-[#F0A02C] shadow-lg shadow-[0_8px_10px_rgba(0,0,0,0.2)] ">
   <div class="flex h-[90px] w-[220px] lg:h-[120px] lg-w-[240px] hidden md:block">
     <a href="#" class="border-none focus:outline-none focus:ring-0 focus:border-transparent">
       <img src="{{ asset('logo/furrhub.png') }}" alt="furrhub-logo" class="h-[100px]  lg:h-[120px] lg:w-[290px] object-cover" /></a>
@@ -135,7 +135,7 @@
             <div class="w-16 h-16 sm:w-20 sm:h-20 xl:w-24 xl:h-24  rounded-lg ">
               <img src="{{asset('images/Furrhub-Product-Categories/Food.png')}}" alt="Food-category" class="transition-transform duration-300 hover:scale-110 " />
             </div>
-            <p class="text-sm sm:text-sm font-medium text-center">Food</p>
+            <p class="text-sm sm:text-sm font-medium text-center">Foods</p>
           </a>
         </div>
 

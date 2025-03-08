@@ -23,7 +23,7 @@
 <!-- nav part -->
 
 
-<header class="fixed top-0 flex bg-[#F0A02C] flex-row justify-start items-center w-full xl:px-10 px-5 py-1 ">
+<header class="fixed top-0 flex bg-[#F0A02C] flex-row justify-start items-center w-full xl:px-10 px-5 py-1  shadow-[0_8px_10px_rgba(0,0,0,0.2)] ">
     <div class="flex flex-row items-center justify-start w-full ">
         <a href="{{route ('dashboard')}}" class="hover:cursor-pointer focus:outline-none">
             <img src="{{ asset('logo/logo1.png') }}" alt="furrhub-logo" class="h-[60px] w-[150px] md:h-[130px] md:w-[300px] hidden lg:block " />
@@ -94,7 +94,7 @@
     </div>
 </header>
 
-<div class="lg:pt-[100px] pt-[80px] lg:mb-10"></div>
+<div class="lg:pt-[90px] pt-[80px] lg:mb-10"></div>
 
 <body class="font-sans antialiased bg-white-400 dark:text-black/50 min-h-screen flex flex-col">
     <div class="bg-white flex-grow">

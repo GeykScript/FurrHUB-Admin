@@ -25,17 +25,44 @@ Route::middleware('auth')->group(function () {
 
 
 
+
+Route::get('/shoppingCart', [ShoppingCartController::class, 'index'])->name('shoppingCart');
+Route::get('/appointment', [AppointmentController::class, 'index'])->name('appointment');
+
+
 require __DIR__.'/auth.php';
 
 
 
-Route::get('/appointment', function () {
-    return view('services.appointment');
-})->name('appointment');
+//  categories routes
+Route::get('/foods', function () {
+    return view('Categories.foods');
+})->name('foods');
 
-Route::get('/shoppingCart', function () {
-    return view('cart.shoppingPage');
-})->name('shoppingCart');
+Route::get('/treats', function () {
+    return view('Categories.treats');
+})->name('treats');
+
+Route::get('/toys', function () {
+    return view('Categories.toys');
+})->name('toys');
+
+Route::get('/grooming-supplies', function () {
+    return view('Categories.grooming-supplies');
+})->name('grooming-supplies');
+
+Route::get('/accessories', function () {
+    return view('Categories.accessories');
+})->name('accessories');
+
+Route::get('/health-needs', function () {
+    return view('Categories.health-needs');
+})->name('health-needs');
+
+Route::get('/essentials', function () {
+    return view('Categories.essentials');
+})->name('essentials');
+
 
 
 

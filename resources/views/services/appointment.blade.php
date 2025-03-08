@@ -32,7 +32,7 @@
             <div></div>
 
             <div class="flex flex-row lg:gap-20 lg:text-lg text-sm gap-10">
-                <a href="#" class="hover:underline hover:text-gray-700 text-gray-800 flex"><i data-lucide="house"></i><span class="md:block hidden"> Home</span></a>
+                <a href="{{route ('dashboard')}}" class="hover:underline hover:text-gray-700 text-gray-800 flex"><i data-lucide="house"></i><span class="md:block hidden"> Home</span></a>
                 <a href="#" class="hover:underline hover:text-gray-700 text-gray-800 flex"><i data-lucide="paw-print"></i><span class="md:block hidden"> My Pets</span></a>
                 <a href="#" class="hover:underline hover:text-gray-700 text-gray-800 flex"><i data-lucide="notebook-pen"></i><span class="md:block hidden">Appointments</span></a>
                 <a href="#" class="hover:underline hover:text-gray-700 text-gray-800 flex"><i data-lucide="philippine-peso"></i><span class="md:block hidden">Price Lists</span></a>
@@ -105,7 +105,7 @@
             <div class="flex flex-row xl:text-4xl text-lg font-bold xl:px-[10rem]">
                 <i data-lucide="paw-print" class="xl:w-[5rem] xl:h-[5rem] w-[4rem] h-[4rem] mt-3 xl:mt-0 text-orange-500"> </i>
                 <div class="items-center justify-center xl:p-4 p-3">
-                    
+
                     @if (Route::has('login'))
                     @auth
                     <p class="xl:text-3xl font-normal">Hello, <span class="font-bold">{{ Auth::user()->first_name}} </span> </p>

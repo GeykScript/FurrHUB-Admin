@@ -320,9 +320,45 @@
 
 
         <x-authenticity-banner />
+        
+        <!-- discover services -->
+        <div class=" lg:px-12">
+            <div class="grid grid-cols-6 lg:p-4 p-2 lg:gap-4 gap-2 bg-sky-100  mt-2 rounded-lg">
+
+                <div class="col-span-6 lg:col-span-3 justify-center items-center">
+                    <a href="{{route('appointment')}}" class="focus:outline-none">
+                        <img src="{{asset('images/services/book-now.jpg')}}" alt="" class="rounded-md  lg:w-full transition-transform duration-300 hover:scale-105">
+                    </a>
+                </div>
+                <div class="lg:col-span-1 col-span-2">
+                    <a href="{{route('appointment')}}" class="focus:outline-none">
+                        <img src="{{asset('images/services/1.jpg')}}"
+                            alt=""
+                            class="lg:w-full lg:h-full rounded-md transition-transform duration-300 hover:scale-105">
+                    </a>
+                </div>
+
+                <div class="lg:col-span-1 col-span-2">
+                    <a href="{{route('appointment')}}" class="focus:outline-none">
+                        <img src="{{asset('images/services/2.jpg')}}"
+                            alt=""
+                            class="lg:w-full lg:h-full rounded-md transition-transform duration-300 hover:scale-105">
+                    </a>
+                </div>
+
+                <div class="lg:col-span-1 col-span-2">
+                    <a href="{{route('appointment')}}" class="focus:outline-none">
+                        <img src="{{asset('images/services/3.jpg')}}"
+                            alt=""
+                            class="lg:w-full lg:h-full rounded-md transition-transform duration-300 hover:scale-105">
+                    </a>
+                </div>
+
+            </div>
+        </div>
 
         <!-- discover products -->
-        <div class="md:px-[3rem] mt-3 px-[1rem]">
+        <div class=" md:px-[3rem] mt-3 px-[1rem]">
             <div class="flex flex-row  w-full items-center justify-center">
                 <h1 class="text-center md:text-4xl text-xl font-bold  uppercase tracking-widest my-10 text-orange-500 ">Discover Products </h1>
                 <div> <i data-lucide="paw-print" class="w-10 h-10 text-orange-500 mx-auto"></i> </div>

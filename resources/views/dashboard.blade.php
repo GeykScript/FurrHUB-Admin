@@ -320,7 +320,7 @@
 
 
         <x-authenticity-banner />
-        
+
         <!-- discover services -->
         <div class=" lg:px-12">
             <div class="grid grid-cols-6 lg:p-4 p-2 lg:gap-4 gap-2 bg-sky-100  mt-2 rounded-lg">
@@ -353,7 +353,6 @@
                             class="lg:w-full lg:h-full rounded-md transition-transform duration-300 hover:scale-105">
                     </a>
                 </div>
-
             </div>
         </div>
 

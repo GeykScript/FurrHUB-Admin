@@ -102,9 +102,10 @@
     </div>
 </header>
 
+<div class="lg:pt-[90px] pt-[80px] lg:mb-10"></div>
 <body class="font-sans antialiased bg-white-600 dark:text-black/50 min-h-screen flex flex-col">
     <div class="bg-white flex-grow">
-        <div class="relative xl:p-12 p-2">
+        <div class="relative  p-2">
             <!-- title cart part -->
             <div class="flex flex-row xl:text-5xl text-xl font-bold xl:px-[10rem]">
                 <i data-lucide="shopping-bag" class="xl:w-[5rem] xl:h-[5rem] w-[2rem] h-[2rem] mt-3 xl:mt-0 text-orange-500"> </i>
@@ -113,7 +114,7 @@
                 </div>
             </div>
 
-            <div class="xl:px-[10rem] xl:py-10 lg:px-5 lg:py-5 ">
+            <div class="xl:px-[10rem] xl:py-8 lg:px-5 lg:py-5 ">
                 <!-- table head part -->
                 <div class="w-full text-xl text-gray-500 dark:text-gray-400">
                     <div class="grid grid-cols-1 xl:grid-cols-5 gap-4 text-xl font-bold text-gray-800 uppercase border border-sky-300 bg-sky-200 p-4 hidden xl:grid rounded-xl">
@@ -170,6 +171,7 @@
                             <a href="#" class="font-medium text-red-500 hover:text-red-400 flex gap-1"> <i data-lucide="trash-2"></i><span class="text-xs lg:text-lg p-1 md:p-0">Remove</span></a>
                         </div>
                     </div>
+                    <!-- products -->
                     <div class="grid grid-rows-1 xl:grid-cols-5 xl:gap-5 gap-4 bg-white p-4 border-b border-gray-300 text-gray-900 text-xl items-center bg-[#FAFAFA] mt-2">
                         <div class="flex flex-col xl:flex-row items-center xl:gap-20 gap-2 col-span-2">
                             <div class="flex flex-row items-center gap-10">
@@ -339,7 +341,6 @@
                                     <p class="xl:text-3xl text-lg  font-bold text-orange-500">₱</p>
                                     <p class="xl:text-2xl text-lg font-bold text-orange-500">1050.00</p>
                                 </div>
-
                                 <div class="flex flex-row justify-center items-center  col-span-2 xl:col-span-1">
                                     <button type="submit" class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded-xl w-full xl:w-[15rem] xl:h-12">Checkout</button>
                                 </div>
@@ -347,10 +348,7 @@
                         </form>
                     </div>
                 </div>
-
-
             </div>
-
         </div>
     </div>
 </body>

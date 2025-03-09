@@ -89,7 +89,10 @@
                         </form>
                     </x-slot>
                 </x-dropdown>
-                @else <a class="pt-1   hover:text-white" href="{{ route('login') }}">Log in </a>
+                @else
+                <img src="{{ asset ('logo/user.svg')}}" alt="user" class="h-[25px] w-[30px] lg:h-[40px] lg:w-[43px]" />
+
+                <a class="pt-1   hover:text-white" href="{{ route('login') }}">Log in </a>
                 <p class="pt-1">|</p>
                 @if (Route::has('register'))
                 <a class="pt-1 hover:text-white" href="{{ route('register') }}">Sign up</a>

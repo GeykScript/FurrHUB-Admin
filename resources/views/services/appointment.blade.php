@@ -32,10 +32,10 @@
             <div></div>
 
             <div class="flex flex-row lg:gap-20 lg:text-lg text-sm gap-10">
-                <a href="{{route ('dashboard')}}" class="hover:underline hover:text-gray-700 text-gray-800 flex"><i data-lucide="house"></i><span class="md:block hidden"> Home</span></a>
-                <a href="#" class="hover:underline hover:text-gray-700 text-gray-800 flex"><i data-lucide="paw-print"></i><span class="md:block hidden"> My Pets</span></a>
-                <a href="#" class="hover:underline hover:text-gray-700 text-gray-800 flex"><i data-lucide="notebook-pen"></i><span class="md:block hidden">Appointments</span></a>
-                <a href="#" class="hover:underline hover:text-gray-700 text-gray-800 flex"><i data-lucide="philippine-peso"></i><span class="md:block hidden">Price Lists</span></a>
+                <a href="{{route ('dashboard')}}" class="hover:text-white text-gray-800 flex"><i data-lucide="house"></i><span class="md:block hidden"> Home</span></a>
+                <a href="#" class="hover:text-white text-gray-800 flex"><i data-lucide="paw-print"></i><span class="md:block hidden"> My Pets</span></a>
+                <a href="#" class="hover:text-white text-gray-800 flex"><i data-lucide="notebook-pen"></i><span class="md:block hidden">Appointments</span></a>
+                <a href="#" class="hover:text-white text-gray-800 flex"><i data-lucide="philippine-peso"></i><span class="md:block hidden">Price Lists</span></a>
             </div>
 
 

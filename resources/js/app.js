@@ -9,10 +9,10 @@ Alpine.start();
 
 
 //lucide icons
-import { createIcons, CircleCheckBig ,Truck, ShieldCheck, CircleArrowRight,PawPrint,ShoppingBag, CircleChevronLeft,Plus,Minus,Trash2,House} from 'lucide';
+import { createIcons, CircleCheckBig ,Truck, ShieldCheck, CircleArrowRight,PawPrint,ShoppingBag, CircleChevronLeft,Plus,Minus,Trash2,House,NotebookPen,PhilippinePeso,ShoppingBasket,CircleUser} from 'lucide';
 
 createIcons({
-    icons: { CircleCheckBig,Truck ,ShieldCheck, CircleArrowRight,PawPrint, ShoppingBag, CircleChevronLeft,Plus,Minus,Trash2, House},
+    icons: { CircleCheckBig,Truck ,ShieldCheck, CircleArrowRight,PawPrint, ShoppingBag, CircleChevronLeft,Plus,Minus,Trash2, House,NotebookPen ,PhilippinePeso, ShoppingBasket, CircleUser},
 });
 
 

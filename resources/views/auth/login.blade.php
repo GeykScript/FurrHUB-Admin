@@ -27,7 +27,7 @@
                 <div class="md:ml-6 ml-3 text-sm md:text-3xl font-medium">Log In</div>
             </div>
             <div>
-                <a href="{{ route('welcome') }}">
+                <a href="{{ route('welcome') }}" class="hover:cursor-pointer focus:outline-none">
                     <img src="{{asset ('logo/x.svg')}}" alt="cancel" class="h-5 w-5 md:h-10 md:w-10 hover:cursor-pointer" />
                 </a>
             </div>

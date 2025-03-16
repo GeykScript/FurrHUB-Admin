@@ -23,10 +23,10 @@
 <!-- nav part -->
 
 
-<header class="fixed top-0 flex bg-[#F0A02C] flex-row justify-start items-center w-full xl:px-10 px-5 py-1  shadow-[0_8px_10px_rgba(0,0,0,0.2)] ">
+<header class="fixed top-0 z-50 flex bg-[#F0A02C] flex-row justify-start items-center w-full xl:px-10 px-5 py-1">
     <div class="flex flex-row items-center justify-start w-full ">
         <a href="{{route ('dashboard')}}" class="hover:cursor-pointer focus:outline-none">
-            <img src="{{ asset('logo/logo1.png') }}" alt="furrhub-logo" class="h-[60px] w-[150px] md:h-[130px] md:w-[300px] hidden lg:block " />
+            <img src="{{ asset(path: 'logo/logo1.png') }}" alt="furrhub-logo" class="h-[60px] w-[150px] md:h-[130px] md:w-[300px] hidden lg:block " />
         </a>
         <div class="flex flex-col  lg:flex-row flex-col-reverse items-center justify-between w-full">
             <div></div>
@@ -94,30 +94,166 @@
     </div>
 </header>
 
-<div class="lg:pt-[90px] pt-[80px] lg:mb-10"></div>
+<div class="lg:pt-[100px] pt-[80px] lg:mb-10"></div>
 
 <body class="font-sans antialiased bg-white-400 dark:text-black/50 min-h-screen flex flex-col">
     <div class="bg-white flex-grow">
         <div class="rounded-2xl  md:h-full ">
             <img src="{{asset('images/welcome-booking.jpg')}}" alt="" class="w-full lg:h-full h-[160px]  object-cover" />
         </div>
-        <div class="relative xl:p-12 p-2">
-            <div class="flex flex-row xl:text-4xl text-lg font-bold xl:px-[10rem]">
-                <i data-lucide="paw-print" class="xl:w-[5rem] xl:h-[5rem] w-[4rem] h-[4rem] mt-3 xl:mt-0 text-orange-500"> </i>
-                <div class="items-center justify-center xl:p-4 p-3">
-
-                    @if (Route::has('login'))
-                    @auth
-                    <p class="xl:text-3xl font-normal">Hello, <span class="font-bold">{{ Auth::user()->first_name}} </span> </p>
-                    @endauth
-                    @endif
-                    <h1 class="items-center text-orange-500">Welcome to FurrHUB Services!</h1>
-                </div>
+        <div class="relative xl:p-12 p-2 flex flex-col items-center">
+            <div class="text-center mb-6">
+                @if (Route::has('login'))
+                @auth
+                <p class="xl:text-3xl text-lg font-normal">Hello, <span class="font-bold text-orange-500">{{ Auth::user()->first_name }}</span></p>
+                <h1 class="items-center text-3xl text-orange-500">Welcome to FurrHUB Services!</h1>
+                @endauth
+                @endif
             </div>
+            <section class="max-w-2xl mx-auto bg-white p-6 rounded-lg mt-6 text-center">
+                <h2 class="text-5xl font-semibold text-blue-600 flex justify-center items-center mb-4 pb-8">My Pets <span class="ml-2 text-yellow-400"></span></h2>
+                <div class="flex justify-center space-x-4">
+                    <!-- Pet items dynamically added here -->
+                    <button class="border-4 border-black rounded-3xl p-4 w-32 h-32 flex items-center justify-center bg-yellow-400 hover:bg-[#F0A02C]">
+                        <svg class="w-10 h-10 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- My Appointments Section -->
+            <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg mt-6 text-center">
+                <!-- Header -->
+                <h2 class="text-4xl font-semibold text-blue-600 flex justify-center items-center mb-4">My Appointments</h2>
+
+                <!-- Appointment Categories -->
+                <div class="flex flex-wrap items-center justify-center bg-orange-100 p-3 rounded-full gap-2">
+                    <!-- Always visible items -->
+                    <span class="bg-green-500 text-white px-4 py-1 text-sm rounded-full">Grooming</span>
+                    <span class="text-gray-700 px-3 py-1 text-sm">Wellness & Laboratory</span>
+
+                    <!-- More Button for Mobile (hidden on larger screens) -->
+                    <div class="relative md:hidden">
+                        <button id="more-btn" class="border border-gray-500 px-4 py-1 rounded-full text-sm">More...</button>
+                        <div id="dropdown-menu" class="absolute hidden bg-white shadow-lg rounded-lg mt-2 w-48 text-left">
+                            <ul class="text-sm text-gray-800">
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Vaccination & Pharmacy</li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Microchipping</li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Pet Insurance</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Extra items (Hidden on Mobile) -->
+                    <div class="hidden md:flex gap-2">
+                        <span class="text-gray-700 px-3 py-1 text-sm">Vaccination & Pharmacy</span>
+                        <span class="text-gray-700 px-3 py-1 text-sm">Microchipping</span>
+                        <span class="text-gray-700 px-3 py-1 text-sm">Pet Insurance</span>
+                    </div>
+                </div>
+
+                <!-- No Appointments Text -->
+                <p class="text-gray-700 text-lg mt-6 mb-20">No Appointments Found</p>
+            </div>
+
+            <!-- Why Choose Us Section -->
+            <section class="bg-orange-500 py-16 px-8 text-white w-screen pb-20">
+                <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start">
+                    <!-- Left Section: Title -->
+                    <div class="lg:w-1/3 text-center lg:text-left mb-12 lg:mb-0">
+                        <h2 class="text-6xl font-bold flex items-center gap-4 leading-tight">
+                            <span class="relative">
+                                <span class="absolute -top-3 -left-6 text-yellow-400 text-7xl"></span>
+                                Why choose us?
+                            </span> 
+                        </h2>
+                    </div>
+                    <!-- Right Section: Features Grid -->
+                    <div class="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/checkmark.png" alt="Check" class="w-6 h-6">
+                            </div>
+                            <span class="text-lg font-semibold">Comfort and Safety</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/checkmark.png" alt="Check" class="w-6 h-6">
+                            </div>
+                            <span class="text-lg font-semibold">Expertise You Can Trust</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/checkmark.png" alt="Check" class="w-6 h-6">
+                            </div>
+                            <span class="text-lg font-semibold">Family-Oriented Care</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
+                                <img src="https://img.icons8.com/ios-filled/50/000000/checkmark.png" alt="Check" class="w-6 h-6">
+                            </div>
+                            <span class="text-lg font-semibold">Customer Satisfaction Guaranteed</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="text-center py-10 pt-20">
+                <h2 class="text-4xl font-bold text-blue-600 flex justify-center items-center">
+                    Our Services
+                    <span class="ml-2 text-yellow-400"></span>
+                </h2>
+                <p class="text-black max-w-xl mx-auto mt-2">
+                    A happy pet is always well-groomed and healthy! Your fur babies deserve the best treatment, and our mission is to ensure they get it here at Pet Express.
+                </p>
+
+                <!-- Service Icons -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 justify-center items-center mt-8">
+                    <a href="#" class="flex flex-col items-center space-y-2">
+                        <div class="w-40 h-40 bg-green-500 rounded-full flex justify-center items-center border-4 border-gray-800 hover:scale-110 transition">
+                            <img src="{{ asset(path: 'public/furrhub-appointment/grooming.png') }}" alt="Grooming" class="w-16">
+                        </div>
+                        <span class="text-sm font-semibold text-black">GROOMING</span>
+                    </a>
+
+                    <a href="#" class="flex flex-col items-center space-y-2">
+                        <div class="w-40 h-40 bg-pink-500 rounded-full flex justify-center items-center border-4 border-gray-800 hover:scale-110 transition">
+                            <img src="wellness-icon.svg" alt="Wellness & Lab" class="w-16">
+                        </div>
+                        <span class="text-sm font-semibold text-black">WELLNESS & LABORATORY</span>
+                    </a>
+
+                    <a href="#" class="flex flex-col items-center space-y-2">
+                        <div class="w-40 h-40 bg-green-400 rounded-full flex justify-center items-center border-4 border-gray-800 hover:scale-110 transition">
+                            <img src="vaccination-icon.svg" alt="Vaccination" class="w-16">
+                        </div>
+                        <span class="text-sm font-semibold text-black">VACCINATION & PHARMACY</span>
+                    </a>
+
+                    <a href="#" class="flex flex-col items-center space-y-2">
+                        <div class="w-40 h-40 bg-purple-500 rounded-full flex justify-center items-center border-4 border-gray-800 hover:scale-110 transition">
+                            <img src="microchip-icon.svg" alt="Microchipping" class="w-16">
+                        </div>
+                        <span class="text-sm font-semibold text-black">MICROCHIPPING</span>
+                    </a>
+
+                    <a href="#" class="flex flex-col items-center space-y-2">
+                        <div class="w-40 h-40 bg-blue-500 rounded-full flex justify-center items-center border-4 border-gray-800 hover:scale-110 transition">
+                            <img src="insurance-icon.svg" alt="Pet Insurance" class="w-16">
+                        </div>
+                        <span class="text-sm font-semibold text-black">PET INSURANCE</span>
+                    </a>
+                </div>
+            </section>
 
         </div>
     </div>
-
+    <script>
+                document.getElementById("more-btn").addEventListener("click", function() {
+                    document.getElementById("dropdown-menu").classList.toggle("hidden");
+                });
+            </script>
     <!-- Footer -->
 </body>
 

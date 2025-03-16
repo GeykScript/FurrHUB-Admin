@@ -23,10 +23,10 @@
 <!-- nav part -->
 
 
-<header class="fixed top-0 z-50 flex bg-[#F0A02C] flex-row justify-start items-center w-full xl:px-10 px-5 py-1">
+<header class="fixed top-0 z-50 flex bg-[#F0A02C] flex-row justify-start items-center w-full xl:px-10 px-5 py-1  shadow-lg  shadow-[0_8px_10px_rgba(0,0,0,0.2)]">
     <div class="flex flex-row items-center justify-start w-full ">
         <a href="{{route ('dashboard')}}" class="hover:cursor-pointer focus:outline-none">
-            <img src="{{ asset(path: 'logo/logo1.png') }}" alt="furrhub-logo" class="h-[60px] w-[150px] md:h-[130px] md:w-[300px] hidden lg:block " />
+            <img src="{{ asset('logo/furrhub.png') }}" alt="furrhub-logo" class="h-[60px] w-full md:h-[130px] md:w-[250px] hidden xl:block " />
         </a>
         <div class="flex flex-col  lg:flex-row flex-col-reverse items-center justify-between w-full">
             <div></div>
@@ -94,167 +94,172 @@
     </div>
 </header>
 
-<div class="lg:pt-[100px] pt-[80px] lg:mb-10"></div>
+<div class="lg:pt-[80px] pt-[70px] lg:mb-10"></div>
 
 <body class="font-sans antialiased bg-white-400 dark:text-black/50 min-h-screen flex flex-col">
     <div class="bg-white flex-grow">
         <div class="rounded-2xl  md:h-full ">
             <img src="{{asset('images/welcome-booking.jpg')}}" alt="" class="w-full lg:h-full h-[160px]  object-cover" />
         </div>
-        <div class="relative xl:p-12 p-2 flex flex-col items-center">
-            <div class="text-center mb-6">
-                @if (Route::has('login'))
-                @auth
-                <p class="xl:text-3xl text-lg font-normal">Hello, <span class="font-bold text-orange-500">{{ Auth::user()->first_name }}</span></p>
-                <h1 class="items-center text-3xl text-orange-500">Welcome to FurrHUB Services!</h1>
-                @endauth
-                @endif
-            </div>
-            <section class="max-w-2xl mx-auto bg-white p-6 rounded-lg mt-6 text-center">
-                <h2 class="text-5xl font-semibold text-blue-600 flex justify-center items-center mb-4 pb-8">My Pets <span class="ml-2 text-yellow-400"></span></h2>
-                <div class="flex justify-center space-x-4">
-                    <!-- Pet items dynamically added here -->
-                    <button class="border-4 border-black rounded-3xl p-4 w-32 h-32 flex items-center justify-center bg-yellow-400 hover:bg-[#F0A02C]">
-                        <svg class="w-10 h-10 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                        </svg>
-                    </button>
+
+        <!-- welcome to furrhub services -->
+        <div class="relative xl:p-6 p-2 items-start mt-2">
+            <div class="flex flex-row xl:text-5xl text-lg font-bold xl:px-[10rem] gap-2">
+                <i data-lucide="paw-print" class="xl:w-[5rem] xl:h-[5rem] w-[4rem] h-[4rem] mt-3 xl:mt-0 text-orange-500"> </i>
+                <div class="items-center justify-center xl:p-1 p-3">
+
+                    @if (Route::has('login'))
+                    @auth
+                    <p class="xl:text-4xl font-normal">Hello, <span class="font-bold">{{ Auth::user()->first_name}} </span> </p>
+                    @endauth
+                    @endif
+                    <h1 class="items-center text-orange-500">Welcome to FurrHUB Services!</h1>
                 </div>
-            </section>
+            </div>
+        </div>
 
-            <!-- My Appointments Section -->
-            <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg mt-6 text-center">
-                <!-- Header -->
-                <h2 class="text-4xl font-semibold text-blue-600 flex justify-center items-center mb-4">My Appointments</h2>
-
-                <!-- Appointment Categories -->
-                <div class="flex flex-wrap items-center justify-center bg-orange-100 p-3 rounded-full gap-2">
-                    <!-- Always visible items -->
-                    <span class="bg-green-500 text-white px-4 py-1 text-sm rounded-full">Grooming</span>
-                    <span class="text-gray-700 px-3 py-1 text-sm">Wellness & Laboratory</span>
-
-                    <!-- More Button for Mobile (hidden on larger screens) -->
-                    <div class="relative md:hidden">
-                        <button id="more-btn" class="border border-gray-500 px-4 py-1 rounded-full text-sm">More...</button>
-                        <div id="dropdown-menu" class="absolute hidden bg-white shadow-lg rounded-lg mt-2 w-48 text-left">
-                            <ul class="text-sm text-gray-800">
-                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Vaccination & Pharmacy</li>
-                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Microchipping</li>
-                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Pet Insurance</li>
-                            </ul>
+        <div class="relative xl:p-12 p-2 flex flex-col items-center">
+            <div class="flex justify-center mt-1">
+                <div class="w-full max-w-5xl">
+                    <div class="grid grid-cols-1 gap-4 text-center">
+                        <div class="flex items-center justify-center">
+                            <i data-lucide="bone" class="w-[50px] h-[50px] text-sky-600"></i>
+                            <h1 class="xl:text-4xl  text-3xl font-bold text-sky-600 ">My Pets</h1>
+                        </div>
+                        <div class="flex items-center text-center">
+                            <h1 class="xl:text-lg">Your pets have no appointment today.</h1>
                         </div>
                     </div>
-
-                    <!-- Extra items (Hidden on Mobile) -->
-                    <div class="hidden md:flex gap-2">
-                        <span class="text-gray-700 px-3 py-1 text-sm">Vaccination & Pharmacy</span>
-                        <span class="text-gray-700 px-3 py-1 text-sm">Microchipping</span>
-                        <span class="text-gray-700 px-3 py-1 text-sm">Pet Insurance</span>
+                    <!---pet images-->
+                    <div class="grid grid-cols-2 gap-2  md:grid-cols-3 lg:grid-cols-3 lg:gap-6 mt-6 justify-center">
+                        <div class="flex flex-col justify-center items-center text-center p-4 hover:cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:opacity-90">
+                            <img src="{{ asset('images/services/max.jpg') }}" alt="Max" class="w-32 h-32 object-cover rounded-lg">
+                            <h1 class="mt-2 font-semibold">Max</h1>
+                        </div>
+                        <div class="flex flex-col justify-center items-center text-center p-4 hover:cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:opacity-90">
+                            <img src="{{ asset('images/services/jazz.jpg') }}" alt="Max" class="w-32 h-32 object-cover rounded-lg">
+                            <h1 class="mt-2 font-semibold ">Jazz</h1>
+                        </div>
+                        <!--add new pet-->
+                        <div class="flex flex-col justify-center items-center text-center p-4  hover:cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 ">
+                            <div class="w-[110px] h-[110px] flex justify-center items-center border-2 border-gray-500 bg-sky-400 hover:bg-sky-300 rounded-xl transition duration-200">
+                                <i data-lucide="plus" class="w-[30px] h-[30px]"></i>
+                            </div>
+                            <h1 class="mt-2 font-semibold">Add Pet</h1>
+                        </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- My Appointments Section -->
+            <div class="bg-white  rounded-lg mt-5 text-center w-full md:max-w-6xl md:mx-auto">
+                <!-- Title -->
+                <div class="flex items-center gap-2 justify-center">
+                    <i data-lucide="notebook-pen" class="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] text-sky-600"></i>
+                    <h2 class="text-2xl sm:text-4xl font-semibold text-sky-600">My Appointments</h2>
+                </div>
+
+                <!-- Appointment Categories -->
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-2 sm:gap-4 bg-orange-200 p-4 rounded-xl lg:mt-10 mt-3">
+                    <button class="text-sm sm:text-lg font-semibold text-gray-700 px-4 py-2 rounded-lg hover:bg-orange-400">
+                        Grooming
+                    </button>
+                    <button class="text-sm sm:text-lg font-semibold text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400">
+                        Wellness & Laboratory
+                    </button>
+                    <button class="text-sm sm:text-lg font-semibold text-gray-700 px-4 py-2 rounded-lg hover:bg-green-400">
+                        Veterinary
+                    </button>
+                    <button class="text-sm sm:text-lg font-semibold text-gray-700 px-4 py-2 rounded-lg hover:bg-sky-400">
+                        Pet Insurance
+                    </button>
                 </div>
 
                 <!-- No Appointments Text -->
-                <p class="text-gray-700 text-lg mt-6 mb-20">No Appointments Found</p>
+                <p class="text-gray-700 text-sm sm:text-lg mt-8 mb-12">No Appointments Found.</p>
             </div>
-
-            <!-- Why Choose Us Section -->
-            <section class="bg-orange-500 py-16 px-8 text-white w-screen pb-20">
-                <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start">
-                    <!-- Left Section: Title -->
-                    <div class="lg:w-1/3 text-center lg:text-left mb-12 lg:mb-0">
-                        <h2 class="text-6xl font-bold flex items-center gap-4 leading-tight">
-                            <span class="relative">
-                                <span class="absolute -top-3 -left-6 text-yellow-400 text-7xl"></span>
-                                Why choose us?
-                            </span> 
-                        </h2>
-                    </div>
-                    <!-- Right Section: Features Grid -->
-                    <div class="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8">
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
-                                <img src="https://img.icons8.com/ios-filled/50/000000/checkmark.png" alt="Check" class="w-6 h-6">
-                            </div>
-                            <span class="text-lg font-semibold">Comfort and Safety</span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
-                                <img src="https://img.icons8.com/ios-filled/50/000000/checkmark.png" alt="Check" class="w-6 h-6">
-                            </div>
-                            <span class="text-lg font-semibold">Expertise You Can Trust</span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
-                                <img src="https://img.icons8.com/ios-filled/50/000000/checkmark.png" alt="Check" class="w-6 h-6">
-                            </div>
-                            <span class="text-lg font-semibold">Family-Oriented Care</span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
-                                <img src="https://img.icons8.com/ios-filled/50/000000/checkmark.png" alt="Check" class="w-6 h-6">
-                            </div>
-                            <span class="text-lg font-semibold">Customer Satisfaction Guaranteed</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="text-center py-10 pt-20">
-                <h2 class="text-4xl font-bold text-blue-600 flex justify-center items-center">
-                    Our Services
-                    <span class="ml-2 text-yellow-400"></span>
-                </h2>
-                <p class="text-black max-w-xl mx-auto mt-2">
-                    A happy pet is always well-groomed and healthy! Your fur babies deserve the best treatment, and our mission is to ensure they get it here at Pet Express.
-                </p>
-
-                <!-- Service Icons -->
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 justify-center items-center mt-8">
-                    <a href="#" class="flex flex-col items-center space-y-2">
-                        <div class="w-40 h-40 bg-green-500 rounded-full flex justify-center items-center border-4 border-gray-800 hover:scale-110 transition">
-                            <img src="{{ asset(path: 'public/furrhub-appointment/grooming.png') }}" alt="Grooming" class="w-16">
-                        </div>
-                        <span class="text-sm font-semibold text-black">GROOMING</span>
-                    </a>
-
-                    <a href="#" class="flex flex-col items-center space-y-2">
-                        <div class="w-40 h-40 bg-pink-500 rounded-full flex justify-center items-center border-4 border-gray-800 hover:scale-110 transition">
-                            <img src="wellness-icon.svg" alt="Wellness & Lab" class="w-16">
-                        </div>
-                        <span class="text-sm font-semibold text-black">WELLNESS & LABORATORY</span>
-                    </a>
-
-                    <a href="#" class="flex flex-col items-center space-y-2">
-                        <div class="w-40 h-40 bg-green-400 rounded-full flex justify-center items-center border-4 border-gray-800 hover:scale-110 transition">
-                            <img src="vaccination-icon.svg" alt="Vaccination" class="w-16">
-                        </div>
-                        <span class="text-sm font-semibold text-black">VACCINATION & PHARMACY</span>
-                    </a>
-
-                    <a href="#" class="flex flex-col items-center space-y-2">
-                        <div class="w-40 h-40 bg-purple-500 rounded-full flex justify-center items-center border-4 border-gray-800 hover:scale-110 transition">
-                            <img src="microchip-icon.svg" alt="Microchipping" class="w-16">
-                        </div>
-                        <span class="text-sm font-semibold text-black">MICROCHIPPING</span>
-                    </a>
-
-                    <a href="#" class="flex flex-col items-center space-y-2">
-                        <div class="w-40 h-40 bg-blue-500 rounded-full flex justify-center items-center border-4 border-gray-800 hover:scale-110 transition">
-                            <img src="insurance-icon.svg" alt="Pet Insurance" class="w-16">
-                        </div>
-                        <span class="text-sm font-semibold text-black">PET INSURANCE</span>
-                    </a>
-                </div>
-            </section>
-
         </div>
     </div>
-    <script>
-                document.getElementById("more-btn").addEventListener("click", function() {
-                    document.getElementById("dropdown-menu").classList.toggle("hidden");
-                });
-            </script>
-    <!-- Footer -->
+    <!-- Why Choose Us Section -->
+    <section class="bg-orange-500 py-16 px-6 text-white w-full pb-20">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start">
+            <!-- Left Section: Title -->
+            <div class="lg:w-1/3 text-center lg:text-left mb-12 lg:mb-0">
+                <h2 class="text-4xl sm:text-6xl font-bold flex items-center gap-4 leading-tight">
+                    <span class="relative">
+                        <span class="absolute -top-3 -left-6 text-yellow-400 text-7xl"></span>
+                        Why choose us?
+                    </span>
+                </h2>
+            </div>
+            <!-- Right Section: Features Grid -->
+            <div class="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 bg-yellow-400 rounded-full flex items-center justify-center">
+                        <i data-lucide="circle-check-big" class="text-gray-700 w-8 sm:w-10 h-8 sm:h-10"></i>
+                    </div>
+                    <span class="text-base sm:text-lg font-semibold leading-relaxed">Safety & Comfort First, Always</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 bg-yellow-400 rounded-full flex items-center justify-center">
+                        <i data-lucide="circle-check-big" class="text-gray-700 w-8 sm:w-10 h-8 sm:h-10"></i>
+                    </div>
+                    <span class="text-base sm:text-lg font-semibold leading-relaxed">Expertise You Can Trust</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 bg-yellow-400 rounded-full flex items-center justify-center">
+                        <i data-lucide="circle-check-big" class="text-gray-700 w-8 sm:w-10 h-8 sm:h-10"></i>
+                    </div>
+                    <span class="text-base sm:text-lg font-semibold leading-relaxed">A Warm, Family-Friendly Atmosphere</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 bg-yellow-400 rounded-full flex items-center justify-center">
+                        <i data-lucide="circle-check-big" class="text-gray-700 w-8 sm:w-10 h-8 sm:h-10"></i>
+                    </div>
+                    <span class="text-base sm:text-lg font-semibold leading-relaxed">Your Satisfaction, Our Priority</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- discover services -->
+    <div class="lg:px-12">
+        <div class="flex flex-col items-center justify-center mt-10">
+            <div class="flex flex-col items-center justify-center">
+                <h1 class="text-4xl font-bold text-sky-600 text-center">Discover Our Services</h1>
+                <p class="text-lg text-gray-700 mt-2 text-center">We offer a wide range of services and learnings for your pets.</p>
+            </div>
+            <div class="grid grid-cols-6 lg:p-4 p-2 lg:gap-4 gap-2 bg-gray-100 mt-10 rounded-lg">
+                <div class="col-span-6 lg:col-span-3 flex flex-col items-center">
+                    <a href="#" class="focus:outline-none">
+                        <img src="{{asset('images/services/learn-now.jpg')}}" alt="" class="rounded-md lg:w-full transition-transform duration-300 hover:scale-105">
+                    </a>
+                </div>
+                <div class="lg:col-span-1 col-span-2 flex flex-col items-center">
+                    <a href="#" class="focus:outline-none">
+                        <img src="{{asset('images/services/1.jpg')}}" alt="Pet Insurance" class="lg:w-full lg:h-full rounded-md transition-transform duration-300 hover:scale-105 object-cover">
+                    </a>
+                    <p class="text-center text-gray-700 font-semibold mt-2">Veterinary</p>
+                </div>
+                <div class="lg:col-span-1 col-span-2 flex flex-col items-center">
+                    <a href="#" class="focus:outline-none">
+                        <img src="{{asset('images/services/2.jpg')}}" alt="Veterinary" class="lg:w-full lg:h-full rounded-md transition-transform duration-300 hover:scale-105 object-cover">
+                    </a>
+                    <p class="text-center text-gray-700 font-semibold mt-2">Grooming</p>
+                </div>
+                <div class="lg:col-span-1 col-span-2 flex flex-col items-center">
+                    <a href="#" class="focus:outline-none">
+                        <img src="{{asset('images/services/3.jpg')}}" alt="Grooming" class="lg:w-full lg:h-full rounded-md transition-transform duration-300 hover:scale-105 object-cover">
+                    </a>
+                    <p class="text-center text-gray-700 font-semibold mt-2">Wellness & Laboratory</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
 </body>
 
 <x-footer bgColor=" bg-gradient-to-r from-orange-600" />

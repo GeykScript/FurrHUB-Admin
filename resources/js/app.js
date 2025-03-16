@@ -9,10 +9,10 @@ Alpine.start();
 
 
 //lucide icons
-import { createIcons, CircleCheckBig ,Truck, ShieldCheck, CircleArrowRight,PawPrint,ShoppingBag, CircleChevronLeft,Plus,Minus,Trash2,House,NotebookPen,PhilippinePeso,ShoppingBasket,CircleUser} from 'lucide';
+import { createIcons, CircleCheckBig ,Truck, ShieldCheck, CircleArrowRight,PawPrint,ShoppingBag, CircleChevronLeft,Plus,Minus,Trash2,House,ChevronDown,NotebookPen,PhilippinePeso,ShoppingBasket,Bone,CircleUser} from 'lucide';
 
 createIcons({
-    icons: { CircleCheckBig,Truck ,ShieldCheck, CircleArrowRight,PawPrint, ShoppingBag, CircleChevronLeft,Plus,Minus,Trash2, House,NotebookPen ,PhilippinePeso, ShoppingBasket, CircleUser},
+    icons: { CircleCheckBig,Truck ,ShieldCheck, CircleArrowRight,PawPrint, ShoppingBag, CircleChevronLeft,Plus,Minus,Trash2, House,NotebookPen ,ChevronDown,PhilippinePeso, ShoppingBasket,Bone, CircleUser},
 });
 
 
@@ -37,3 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector("#dropdownbtn").addEventListener("click", function () {
+            document.getElementById("dropdownMenu").classList.toggle("hidden");
+        });
+    });

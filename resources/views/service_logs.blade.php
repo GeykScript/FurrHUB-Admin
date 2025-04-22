@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Furr Hub</title>
+    <title>FurrHub - Pet Service Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="{{ asset('logo/logo1.png') }}" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="//unpkg.com/alpinejs" defer></script>
-</head>
+    </head>
 <body class="bg-gray-100">
     <div class="flex h-screen">
-        <!-- Sidebar -->
-        <div class="w-90 bg-white border-r shadow-sm">
+    <!-- Sidebar -->
+    <div class="w-90 bg-white border-r shadow-sm">
             <div class="p-4">
                 <div class="flex items-center mb-8">
                     <img src="{{ asset('logo/logo1.png') }}" alt="FurrHub Logo" class="h-[70px] w-[150px] lg:h-[125px] lg:w-[300px]" />
@@ -20,7 +21,7 @@
                 <nav class="font-bold">
                     <ul>
                         <li class="mb-2 border border-gray shadow-sm rounded-lg">
-                            <a href="{{ route('welcome') }}" class="block p-3 flex items-center text-lg text-white bg-[#F0A02C] rounded transition duration-200">
+                            <a href="{{ route('welcome') }}" class="block p-3 flex items-center text-lg text-black hover:bg-gray-300 rounded transition duration-200">
                                 <svg class="w-10 h-10 pr-2 ml-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
                                 </svg>
@@ -53,13 +54,13 @@
                             </a>
                         </li>
                         <li class="mb-2 border border-gray shadow-sm rounded-lg">
-                        <a href="{{ route('service_logs') }}" class="block p-3 flex text-lg items-center text-black hover:bg-gray-300 rounded transition duration-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-10 h-10 pr-2 ml-2"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96L0 416c0 53 43 96 96 96l288 0 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64c17.7 0 32-14.3 32-32l0-320c0-17.7-14.3-32-32-32L384 0 96 0zm0 384l256 0 0 64L96 448c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16zm16 48l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
+                        <a href="{{ route('service_logs') }}" class="block p-3 flex text-lg items-center text-lg text-white bg-[#F0A02C] rounded transition duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-10 h-10 pr-2 ml-2" fill="white"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96L0 416c0 53 43 96 96 96l288 0 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64c17.7 0 32-14.3 32-32l0-320c0-17.7-14.3-32-32-32L384 0 96 0zm0 384l256 0 0 64L96 448c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16zm16 48l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
                                 SERVICE HISTORY
                             </a>
                         </li>
                         <li class="mb-2 border border-gray shadow-sm rounded-lg">
-                            <a href="{{ route('products') }}" class="block p-3 flex text-lg items-center text-black hover:bg-gray-300 rounded transition duration-200">
+                            <a href="{{ route('products') }}" class="block p-3 text-lg flex items-center text-black hover:bg-gray-300 rounded transition duration-200">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-10 h-10 pr-2 ml-2"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192 32 192c-17.7 0-32 14.3-32 32s14.3 32 32 32L83.9 463.5C91 492 116.6 512 146 512L430 512c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32l-85.6 0L365.3 12.9C359.2 1.2 344.7-3.4 332.9 2.7s-16.3 20.6-10.2 32.4L404.3 192l-232.6 0L253.3 35.1zM192 304l0 96c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-96c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16l0 96c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-96c0-8.8 7.2-16 16-16zm128 16l0 96c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-96c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
                                 MANAGE PRODUCTS
                             </a>
@@ -88,8 +89,7 @@
 
         <!-- Main Content -->
         <div class="flex-1 bg-gray-50">
-            <!-- Top Bar -->
-            <div class="bg-[#F0A02C] shadow-sm h-26">
+        <div class="bg-[#F0A02C] shadow-sm h-26">
                 <div class="max-w-full mx-auto px-4 py-3 flex justify-between items-center">
                     <div class="flex items-center">
                         <svg fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 pl-2"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="m22 2.25h-3.25v-1.5c-.014-.404-.344-.726-.75-.726s-.736.322-.75.725v.001 1.5h-4.5v-1.5c-.014-.404-.344-.726-.75-.726s-.736.322-.75.725v.001 1.5h-4.5v-1.5c-.014-.404-.344-.726-.75-.726s-.736.322-.75.725v.001 1.5h-3.25c-1.104 0-2 .895-2 1.999v17.75c0 1.105.895 2 2 2h20c1.105 0 2-.895 2-2v-17.75c0-1.104-.896-1.999-2-1.999zm.5 19.75c0 .276-.224.499-.499.5h-20.001c-.276 0-.5-.224-.5-.5v-17.75c.001-.276.224-.499.5-.499h3.25v1.5c.014.404.344.726.75.726s.736-.322.75-.725v-.001-1.5h4.5v1.5c.014.404.344.726.75.726s.736-.322.75-.725v-.001-1.5h4.5v1.5c.014.404.344.726.75.726s.736-.322.75-.725v-.001-1.5h3.25c.276 0 .499.224.499.499z"></path><path d="m5.25 9h3v2.25h-3z"></path><path d="m5.25 12.75h3v2.25h-3z"></path><path d="m5.25 16.5h3v2.25h-3z"></path><path d="m10.5 16.5h3v2.25h-3z"></path><path d="m10.5 12.75h3v2.25h-3z"></path><path d="m10.5 9h3v2.25h-3z"></path><path d="m15.75 16.5h3v2.25h-3z"></path><path d="m15.75 12.75h3v2.25h-3z"></path><path d="m15.75 9h3v2.25h-3z"></path></g></svg>
@@ -118,170 +118,96 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Dashboard Content -->
-            <div class="p-6">
-                <!-- Stats Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-                    <div class="bg-white rounded-lg shadow p-4 flex items-center">
-                        <div class="bg-orange-100 text-orange-500 rounded-full p-3 mr-4">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3z"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <div class="text-xs text-gray-500 mb-1">TOTAL ORDERS</div>
-                            <div class="text-lg font-bold text-gray-800">40,000</div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow p-4 flex items-center">
-                        <div class="bg-orange-100 text-orange-500 rounded-full p-3 mr-4">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <div class="text-xs text-gray-500 mb-1">TOTAL REVENUE</div>
-                            <div class="text-lg font-bold text-gray-800">$40,000.00</div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow p-4 flex items-center">
-                        <div class="bg-orange-100 text-orange-500 rounded-full p-3 mr-4">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <div class="text-xs text-gray-500 mb-1">TOTAL APPOINTMENTS</div>
-                            <div class="text-lg font-bold text-gray-800">500</div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow p-4 flex items-center">
-                        <div class="bg-orange-100 text-orange-500 rounded-full p-3 mr-4">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <div class="text-xs text-gray-500 mb-1">TOTAL USERS</div>
-                            <div class="text-lg font-bold text-gray-800">500</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Best Selling Products -->
-                <div class="bg-white rounded-lg shadow mb-6">
-                    <div class="px-6 py-4 border-b">
-                        <h2 class="text-2xl font-bold text-gray-800">Best Selling Products</h2>
-                    </div>
-                    <div class="divide-y">
-                        @php
-                            $products = [
-                                [
-                                    'name' => 'Pedigree 18 Pouch Variety Pack',
-                                    'description' => 'Premium nutrition dog food for all breeds and sizes.',
-                                    'image' => 'images/products/dog.jpg'
-                                ],
-                                [
-                                    'name' => 'Royal Canin Adult Cat Food',
-                                    'description' => 'Specially formulated nutrient-rich food for adult cats.',
-                                    'image' => 'images/products/cat-foods.webp'
-                                ]
-                            ];
-                        @endphp
-
-                        @for ($i = 0; $i < 4; $i++)
-                            @php
-                                $product = $products[$i % count($products)];
-                            @endphp
-                            <div class="flex items-center p-4 hover:bg-gray-50 transition duration-150">
-                                <img src="{{ asset($product['image']) }}" alt="{{ $product['name'] }}" class="w-16 h-16 mr-4 rounded object-cover">
-                                <div>
-                                    <h3 class="text-lg font-bold text-gray-800 mb-1">{{ $product['name'] }}</h3>
-                                    <p class="text-sm text-gray-500">{{ $product['description'] }}</p>
-                                </div>
-                            </div>
-                        @endfor
-                    </div>
-                </div>
-                
-                <!-- Order Status -->
-                <div class="bg-white rounded-lg shadow">
-                    <div class="px-6 py-4 border-b">
-                        <h2 class="text-2xl font-bold text-gray-800">Order Status</h2>
-                    </div>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6">
-                        <div class="text-center">
-                            <div class="bg-orange-100 text-orange-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
-                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
-                                </svg>
-                            </div>
-                            <div class="text-2xl font-bold text-gray-800 mb-1">500</div>
-                            <div class="text-sm text-gray-500">Pending</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="bg-blue-100 text-blue-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
-                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3 1h6v2H5V6zm6 4H5v2h6v-2z"></path>
-                                    <path d="M15 7h1a2 2 0 012 2v6a2 2 0 01-2 2h-1V7z"></path>
-                                </svg>
-                            </div>
-                            <div class="text-2xl font-bold text-gray-800 mb-1">500</div>
-                            <div class="text-sm text-gray-500">Shipped</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="bg-green-100 text-green-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
-                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                            <div class="text-2xl font-bold text-gray-800 mb-1">500</div>
-                            <div class="text-sm text-gray-500">Delivered</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="bg-red-100 text-red-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
-                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                            <div class="text-2xl font-bold text-gray-800 mb-1">500</div>
-                            <div class="text-sm text-gray-500">Cancelled</div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Content -->
+    <div class="flex-1 overflow-auto p-6">
+        <div class="bg-white rounded-lg shadow-sm p-6">
+        <div class="flex items-center mb-6">
+            <div class="flex items-center text-[#F0A02C] text-xl font-bold">
+            <i class="fas fa-clipboard-check mr-2"></i>
+            <h2>Vet & Grooming Logs</h2>
             </div>
         </div>
-    </div>
-    <script>
-        function updateDateTime() {
-        const now = new Date();
         
-        // Format date
-        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-        const month = months[now.getMonth()];
-        const day = now.getDate();
-        const year = now.getFullYear();
-        
-        // Format time
-        let hours = now.getHours();
-        const minutes = now.getMinutes().toString().padStart(2, '0');
-        const ampm = hours >= 12 ? 'PM' : 'AM';
-        
-        hours = hours % 12;
-        hours = hours ? hours : 12; // Convert 0 to 12
-        
-        // Create formatted strings
-        const dateString = `${month} ${day}, ${year}`;
-        const timeString = `${hours}:${minutes} ${ampm}`;
-        
-        // Update DOM
-        document.getElementById('datetime').innerHTML = `${dateString} <br> ${timeString}`;
-        }
+        <div class="flex justify-between mb-4">
+            <div class="relative">
+            <input type="text" placeholder="Search" class="pl-10 pr-4 py-2 border rounded-md w-64">
+            <i class="fas fa-search absolute left-3 top-3 text-gray-400 border-black"></i>
+            </div>
+            
+            <div class="flex items-center space-x-2">
+            <span class="text-sm text-gray-600">Status:</span>
+            <select class="border rounded-md px-3 py-2 bg-white">
+                <option>All</option>
+            </select>
+            
+            <span class="ml-4 text-sm text-gray-600">Generate Report:</span>
+            <button class="text-blue-500">
+                <i class="fas fa-file-pdf"></i>
+            </button>
+            <button class="text-blue-500">
+                <i class="fas fa-print"></i>
+            </button>
+            </div>
+        </div>
+    
+        <div class="overflow-x-auto">
+        <div class="border border-black rounded-lg">
+            <table class="min-w-full border-collapse">
+            <thead>
+                <tr>
+                <th class="px-4 py-3 text-left text-m font-bold text-black">Transaction ID</th>
+                <th class="px-4 py-3 text-left text-m font-bold text-black">Customer Name</th>
+                <th class="px-4 py-3 text-left text-m font-bold text-black">Customer's Pet Name</th>
+                <th class="px-4 py-3 text-left text-m font-bold text-black">Type of Service</th>
+                <th class="px-4 py-3 text-left text-m font-bold text-black">Service Availed</th>
+                <th class="px-4 py-3 text-left text-m font-bold text-black">Appointment Date</th>
+                <th class="px-4 py-3 text-left text-m font-bold text-black">Service Provider</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="px-4 py-3">1</td>
+                    <td class="px-4 py-3">Bob</td>
+                    <td class="px-4 py-3">Jazz</td>
+                    <td class="px-4 py-3">Vaccination</td>
+                    <td class="px-4 py-3">TriCat Vaccine</td>
+                    <td class="px-4 py-3">25-03-2025</td>
+                    <td class="px-4 py-3">Dr. John Doe</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        </div>
 
-        // Update immediately and then every second
-        updateDateTime();
-        setInterval(updateDateTime, 1000);
-    </script>
+<script>
+    function updateDateTime() {
+    const now = new Date();
+    
+    // Format date
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const month = months[now.getMonth()];
+    const day = now.getDate();
+    const year = now.getFullYear();
+    
+    // Format time
+    let hours = now.getHours();
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    
+    hours = hours % 12;
+    hours = hours ? hours : 12; // Convert 0 to 12
+    
+    // Create formatted strings
+    const dateString = `${month} ${day}, ${year}`;
+    const timeString = `${hours}:${minutes} ${ampm}`;
+    
+    // Update DOM
+    document.getElementById('datetime').innerHTML = `${dateString} <br> ${timeString}`;
+    }
+
+    // Update immediately and then every second
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
 </body>
 </html>

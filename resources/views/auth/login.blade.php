@@ -29,18 +29,13 @@
                 <div class="bg-black md:w-[2px] md:h-[3rem] w-[1px] h-[2rem]"></div>
                 <div class="md:ml-6 ml-3 text-sm md:text-3xl font-medium">Log In</div>
             </div>
-            <div>
-                <a href="{{ route('welcome') }}" class="hover:cursor-pointer focus:outline-none">
-                    <img src="{{asset ('logo/x.svg')}}" alt="cancel" class="h-5 w-5 md:h-10 md:w-10 hover:cursor-pointer" />
-                </a>
-            </div>
         </div>
     </div>
 </header>
 
 <body class="bg-sky-300">
 
-    <div class="flex flex-col md:flex-row justify-center items-center md:mt-10 mt-4">
+    <div class="flex flex-col md:flex-row justify-center items-center md:mt-10 mt-4 pt-5 ">
         <div class="md:h-[688px] md:w-[600px] h-[21rem] w-[20rem] ">
             <img src="{{asset('images/furrhub-login-signin/1.jpg')}}" alt="" class="w-[100%] h-[100%] md:rounded-l-[15px] md:rounded-r-[0px]  rounded-t-[15px] " />
         </div>
@@ -102,12 +97,7 @@
 
                 </div>
             </form>
-
         </div>
     </div>
 </body>
-<!-- Footer -->
-<x-footer bgColor="bg-gray-100" />
-
-
 </html>

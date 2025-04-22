@@ -9,9 +9,44 @@ use App\Http\Controllers\ProductController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 })->name('welcome');
 
+Route::get('/manage-users', function () {
+    return view('users');
+})->name('users.manage');
+
+Route::get('/service-logs', function () {
+    return view('service_logs');
+})->name('service_logs');
+
+Route::get('/services', function () {
+    return view('services');
+})->name('services_offer');
+
+Route::get('/add-services', function () {
+    return view('add-services');
+})->name('add-services');
+
+Route::get('/products', function () {
+    return view('products');
+})->name('products');
+
+Route::get('/orders', function () {
+    return view('orders');
+})->name('orders');
+
+Route::get('/appointments', function () {
+    return view('appointments');
+})->name('appointments');
+
+Route::get('/add-products', function () {
+    return view('add_products');
+})->name('add-products');
+
+Route::get('/edit-product', function () {
+    return view('edit_product');
+})->name('edit-product');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

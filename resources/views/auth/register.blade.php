@@ -47,7 +47,7 @@
             <x-auth-session-status class="mb-4" :status="session('status')" />
 
             <!--Form-->
-            <form method="POST" action="{{ route('register') }}" class="w-[80%] md:w-[75%]">
+            <form method="POST" action="{{ route('admin.register') }}" class="w-[80%] md:w-[75%]">
                 <div class="flex justify-center ">
                     <h1 class="md:text-[2rem] text-[1rem]  uppercase tracking-widest font-semibold text-gray-600">Sign Up</h1>
                 </div>
